@@ -1,6 +1,6 @@
 ---
 title: Ethan Lew
-role: Cyber-Physical Systems Engineer
+role: Cyber-Physical Systems Research Engineer
 avatar_filename: 73504711_2499633383590539_7863386237602627584_n-1-.jpg
 bio: My research interests include behavioral verification, optimal controls,
   and differential privacy.
@@ -14,7 +14,7 @@ social:
   - display:
       header: false
     link: www.linkedin.com/in/ethan-lew
-    icon_pack: fas
+    icon_pack: fab
     icon: linkedin
 organizations:
   - name: Galois, Inc.
