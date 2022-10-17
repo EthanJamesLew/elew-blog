@@ -20,7 +20,5 @@ organizations:
   - name: Galois, Inc.
     url: https://galois.com/
 superuser: true
-status:
-  icon: ☕️
 ---
 I am Ethan Lew, a Cyber-physical Systems Research Engineer. I work on building safe autonomous vehicles with formal methods and explainable AI. At Galois, we are inventing new approaches to the verification of high assurance cyber-physical systems that must operate in unstructured and uncertain environments. Also, Rust is safe and fast--we should use it more!
