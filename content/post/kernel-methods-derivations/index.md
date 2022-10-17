@@ -15,12 +15,12 @@ image:
 We have a collection of $n$ observations for training data $\mathbf X \in \mathbb R^{n \times m}$. Also, this data has labels $Y \in \mathbb R^n$ that are the result of a function $f: \mathbb R^m \rightarrow \mathbb R$ applied to $\mathbf X$ *plus some additive, zero-mean noise independently and identically distributed (the noise motivates regularization)*. Our goal is to learn an estimate of $f$, $\hat f$, that minimizes the loss function
 
 $$
-\operatorname*{argmin}_{\hat{f}} \sum_{i=1}^{n} \left( \hat f(\mathbf x_i) - y_i \right)^2 + \lambda M(\hat f),
+\text{argmin}_{\hat{f}} \sum_{i=1}^{n} \left( \hat f(\mathbf x_i) - y_i \right)^2 + \lambda M(\hat f),
 $$
 
 where $M$ is some regularizer to control the complexity of $\hat f$ in the presence of noisy training data. This objective---namely the space of functions to consider and the notion of their complexity---is poorly defined. So, we restrict ourselves to finding an estimate in the reproducing kernel hilbert space (RKHS) $\mathcal H$ for a provided kernel function $k: \mathbb R^m \times \mathbb R^m \rightarrow \mathbb R$ *with a regularization term (the smoothness functional)*.
 $$
-\operatorname*{argmin}_{\hat{f} \in \mathcal H} \frac{1}{2} \sum_{i=1}^{n} \left( \hat f(\mathbf x_i) - y_i \right)^2 + \frac{\lambda}{2}\|\hat f \|^2_{\mathcal H}.
+\text{argmin}_{\hat{f} \in \mathcal H} \frac{1}{2} \sum_{i=1}^{n} \left( \hat f(\mathbf x_i) - y_i \right)^2 + \frac{\lambda}{2}\|\hat f \|^2_{\mathcal H}.
 $$
 
 ## Solution (Kernel Ridge Regression)
@@ -31,7 +31,7 @@ $$
 $$
 meaning that the optimization problem is equivalent to finding the weights $\mathbf \alpha = (\alpha_1, , \alpha_2, \dots, \alpha_n)^T$,
 $$
-\operatorname*{argmin}_{\alpha \in \mathbb R^n} \frac{1}{2} \left\| Y - \mathbf K \alpha \right\|^2_2 + \frac{\lambda}{2}\alpha^T \mathbf K \alpha,
+\text{argmin}_{\alpha \in \mathbb R^n} \frac{1}{2} \left\| Y - \mathbf K \alpha \right\|^2_2 + \frac{\lambda}{2}\alpha^T \mathbf K \alpha,
 $$
 where the kernel matrix $\mathbf K$ has elements $\mathbf K_{ij} = k(\mathbf x_i, \mathbf x_j). $We can take the gradient the objective and we find the single solution $\mathbf K\left( \mathbf K + \lambda \mathbf I \right)\alpha = \mathbf K Y$ when the gradient is zero. Thus,
 $$
@@ -53,7 +53,7 @@ We have a collection of $n$ observations for training data $\mathbf X \in \mathb
 
 \begin{equation}
 
-\operatorname*{argmin} _{\hat f} \sum_i^N \max \left(0,1-y_i \hat f\left(\mathbf{x}_i\right)\right).
+\text{argmin} _{\hat f} \sum_i^N \max \left(0,1-y_i \hat f\left(\mathbf{x}_i\right)\right).
 
 \end{equation}
 
@@ -69,7 +69,7 @@ allowing for the optimization problem
 
 \begin{equation}
 
-\operatorname*{argmin} _{\mathbf{w} \in \mathbb{R}^d}\|\mathbf{w}\|^2+C \sum_i^N \max \left(0,1-y_i f\left(\mathbf{x}_i\right)\right).
+\text{argmin} _{\mathbf{w} \in \mathbb{R}^d}\|\mathbf{w}\|^2+C \sum_i^N \max \left(0,1-y_i f\left(\mathbf{x}_i\right)\right).
 
 \end{equation}
 
