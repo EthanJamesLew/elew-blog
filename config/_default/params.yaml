@@ -18,8 +18,8 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo blog theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    description: 'Ethan Lew Blog'
+    twitter: 'eth0lew'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -65,7 +65,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/EthanJamesLew/elew-blog.git'
     content_dir: content
     branch: main
   avatar:
