@@ -1,6 +1,6 @@
 ---
-title: Kernel Methods Derivations
-subtitle: Regression and Classification with Kernels
+title: Regression and Classification with Kernels
+subtitle: My Notes of KRR and SVMs
 date: 2022-10-17T00:10:28.548Z
 draft: false
 featured: false
