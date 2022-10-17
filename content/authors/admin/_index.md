@@ -13,7 +13,7 @@ social:
     link: https://twitter.com/eth0lew
   - display:
       header: false
-    link: www.linkedin.com/in/ethan-lew
+    link: https://www.linkedin.com/in/ethan-lew
     icon_pack: fab
     icon: linkedin
 organizations:
