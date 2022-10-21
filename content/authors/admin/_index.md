@@ -5,9 +5,6 @@ avatar_filename: avatar.jpg
 bio: My research interests include behavioral verification, optimal controls,
   and differential privacy.
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: about/#contact
   - display:
       header: false
     link: https://github.com/EthanJamesLew
@@ -21,6 +18,9 @@ social:
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/eth0lew
+  - icon: envelope
+    icon_pack: fas
+    link: about/#contact
 organizations:
   - name: Galois, Inc.
     url: https://galois.com/
