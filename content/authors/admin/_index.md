@@ -12,6 +12,11 @@ social:
     icon: github
   - display:
       header: false
+    link: https://stackoverflow.com/users/13176319/dbat
+    icon_pack: fab
+    icon: stackoverflow
+  - display:
+      header: false
     link: https://www.linkedin.com/in/ethan-lew
     icon_pack: fab
     icon: linkedin
