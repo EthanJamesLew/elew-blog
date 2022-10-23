@@ -14,7 +14,7 @@ social:
       header: false
     link: https://stackoverflow.com/users/13176319/dbat
     icon_pack: fab
-    icon: stackoverflow
+    icon: stack-overflow
   - display:
       header: false
     link: https://www.linkedin.com/in/ethan-lew
