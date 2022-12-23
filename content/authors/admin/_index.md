@@ -20,9 +20,9 @@ social:
     link: https://www.linkedin.com/in/ethan-lew
     icon_pack: fab
     icon: linkedin
-  - icon: twitter
+  - icon: mastodon
     icon_pack: fab
-    link: https://twitter.com/eth0lew
+    link: https://mastodon.eth0lew.com/@eth0lew
   - icon: envelope
     icon_pack: fas
     link: about/#contact
