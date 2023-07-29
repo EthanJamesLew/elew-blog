@@ -20,12 +20,11 @@ social:
     link: https://www.linkedin.com/in/ethan-lew
     icon_pack: fab
     icon: linkedin
-  - icon: mastodon
-    icon_pack: fab
-    link: https://mastodon.eth0lew.com/@eth0lew
-  - icon: envelope
-    icon_pack: fas
-    link: about/#contact
+  - display:
+      header: false
+    icon: google-scholar
+    icon_pack: ai 
+    link: https://scholar.google.com/citations?user=WAm_KvwAAAAJ&hl=en&oi=ao 
 organizations:
   - name: Galois, Inc.
     url: https://galois.com/
