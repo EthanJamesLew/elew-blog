@@ -1,0 +1,154 @@
+---
+title: Feature Modeling via Chocosolver
+subtitle: Web Assembly App (Work in Progress)
+date: 2024-02-03T00:10:28.548Z
+draft: false
+featured: true
+tags: []
+math: true
+image:
+  filename: featured
+  focal_point: Smart
+  preview_only: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CheerpJ Test</title>
+  <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pane {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px 0;
+      width: 95%;
+      max-width: 600px;
+    }
+    .CodeMirror { font-size: small }
+    #uploadPane {
+      text-align: center;
+    }
+    #runButtonPane {
+      text-align: center;
+    }
+    #outputPane {
+      background-color: #f9f9f9;
+    }
+    #exitCode {
+      white-space: pre-wrap; /* Ensures formatting of output text */
+    }
+    button {
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <p>
+  This is a work in progress webassembly app that finds product instances of a feature model.
+
+  <img src="telematics.svg" alt="Feature Model of Telematics Model"/>
+  <em>Example Feature Model of Telematics System</em>
+  </p>
+  <div id="editorPane" class="pane">
+      <h3>Edit Text</h3>
+      <!-- This div will be converted into a CodeMirror editor -->
+      <div id="codeEditor">Feature model in the Clafer modeling language embedded in JavaScript...</div>
+  </div>
+  
+  <div id="uploadPane" class="pane">
+      <h3>Upload File (Optional)</h3>
+      <input type="file" id="fileInput" />
+  </div>
+
+
+  <div id="runButtonPane" class="pane">
+      <button id="uploadButton">Run Chocosolver</button>
+  </div>
+
+  <div id="outputPane" class="pane">
+      <h3>Output</h3>
+      <div id="exitCode"></div>
+  </div>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+  <script>
+      (async function () {
+          await cheerpjInit();
+
+          // Initialize CodeMirror on the #codeEditor div
+          var editor = CodeMirror(document.getElementById("codeEditor"), {
+              value: 'defaultScope(1);\n' +
+                      'intRange(-8, 7);\n' +
+                      'stringLength(16);\n' +
+                      '\n' +
+                      'telematicsSystem = Clafer("telematicsSystem").withCard(1, 1);\n' +
+                      'channel = telematicsSystem.addChild("channel").withCard(1, 1).withGroupCard(1, 1);\n' +
+                      'single = channel.addChild("single").withCard(0, 1);\n' +
+                      'dual = channel.addChild("dual").withCard(0, 1);\n' +
+                      'extraDisplay = telematicsSystem.addChild("extraDisplay").withCard(0, 1);\n' +
+                      'size = telematicsSystem.addChild("size").withCard(1, 1).withGroupCard(1, 1);\n' +
+                      'small = size.addChild("small").withCard(0, 1);\n' +
+                      'large = size.addChild("large").withCard(0, 1);\n',
+              mode:  "javascript",
+              lineNumbers: true,
+              theme: "default"
+          });
+
+          document.getElementById('uploadButton').addEventListener('click', async () => {
+              const fileInput = document.getElementById('fileInput');
+              let content;
+
+              // Check if a file was uploaded; prioritize file upload over text input
+              if (fileInput.files.length > 0) {
+                  const file = fileInput.files[0];
+                  const reader = new FileReader();
+
+                  reader.onload = async (e) => {
+                      content = e.target.result;
+                      processContent(file.name, content);
+                  };
+
+                  reader.readAsText(file);
+              } else {
+                  // Use text input from CodeMirror if no file is uploaded
+                  content = editor.getValue();
+                  const fileName = "textEditorInput.txt"; // Default file name for text input
+                  processContent(fileName, content);
+              }
+          });
+
+          async function processContent(fileName, content) {
+              const filePath = `/str/${fileName}`;
+              cheerpOSAddStringFile(filePath, content);
+
+              const exitCode = await cheerpjRunJar("/app/chocosolver-0.4.4-jar-with-dependencies.jar", "--file", filePath, "--output", "/files/out.txt");
+              console.log(`Program exited with code ${exitCode}`);
+
+              document.getElementById('exitCode').innerHTML = `Program exited with code ${exitCode}`;
+
+              const blob = await cjFileBlob("/files/out.txt");
+              const outputContent = await blob.text();
+              document.getElementById('exitCode').innerHTML += `<br>Output:<br>${outputContent.replace(/\n/g, '<br>')}`;
+          }
+      })();
+  </script>
+</body>
+</html>
+
