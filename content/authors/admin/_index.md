@@ -24,7 +24,7 @@ social:
       header: false
     icon: google-scholar
     icon_pack: ai 
-    link: https://scholar.google.com/citations?user=WAm_KvwAAAAJ&hl=en&oi=ao 
+    link: https://scholar.google.com/citations?user=p8ZtL_0AAAAJ
   - display:
       header: false
     icon: cv 
