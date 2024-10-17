@@ -1,6 +1,6 @@
 ---
 title: Ethan Lew
-role: Cyber-Physical Systems Research Engineer
+role: Cyber-Physical Systems Engineer
 avatar_filename: avatar.jpg
 bio: My research interests include behavioral verification, optimal controls,
   and differential privacy.
@@ -35,4 +35,4 @@ organizations:
     url: https://galois.com/
 superuser: true
 ---
-I am Ethan Lew, a Cyber-physical Systems Research Engineer. I work on building safe autonomous vehicles with formal methods and explainable AI. At Galois, we are inventing new approaches to the verification of high assurance cyber-physical systems that must operate in unstructured and uncertain environments. Also, Rust is safe and fast--we should use it more!
+I am Ethan Lew, a Cyber-physical Systems Research Engineer. 
