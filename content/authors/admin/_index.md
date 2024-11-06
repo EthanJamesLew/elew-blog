@@ -31,8 +31,8 @@ social:
     icon_pack: ai 
     link: https://ethanjameslew.github.io/elew-cv/elew-cv.pdf 
 organizations:
-  - name: Galois, Inc.
-    url: https://galois.com/
+  - name: P-1.ai
+    url: https://p-1.ai/
 superuser: true
 ---
 I am Ethan Lew, a Cyber-physical Systems Research Engineer. 
