@@ -1,25 +1,20 @@
-# Essentially Minimal theme but with constant home section bg color.
+# Matches the standalone homepage: ink, bone, and one orange.
 name = "Starter Blog"
 
 [light]
-  # Primary
-  primary = "#2962ff"
-
-  # Menu
-  menu_primary = "rgb(247, 250, 252)"
-  menu_text = "#34495e"
-  menu_text_active = "#2962ff"
-  menu_title = "#2b2b2b"
-
-  # Home sections
-  home_section_odd = "rgb(247, 250, 252)"
-  home_section_even = "rgb(247, 250, 252)"
+  primary = "#bf3a00"
+  menu_primary = "#ecebe3"
+  menu_text = "#0b0c0a"
+  menu_text_active = "#bf3a00"
+  menu_title = "#0b0c0a"
+  home_section_odd = "#ecebe3"
+  home_section_even = "#ecebe3"
 
 [dark]
-  primary = "#bbdefb"
-  link = "#bbdefb"
-  link_hover = "#bbdefb"
-  background = "rgb(26, 32, 44)"
-  home_section_odd = "rgb(26, 32, 44)"
-  home_section_even = "rgb(26, 32, 44)"
-  menu_primary = "rgb(26, 32, 44)"
+  primary = "#ff6a2b"
+  link = "#ff6a2b"
+  link_hover = "#ff8a57"
+  background = "#0b0c0a"
+  home_section_odd = "#0b0c0a"
+  home_section_even = "#0b0c0a"
+  menu_primary = "#0b0c0a"

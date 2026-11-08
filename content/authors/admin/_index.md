@@ -1,9 +1,8 @@
 ---
 title: Ethan Lew
-role: Cyber-Physical Systems Engineer
+role: Head of Customer Engineering, P-1 AI
 avatar_filename: avatar.jpg
-bio: My research interests include behavioral verification, optimal controls,
-  and differential privacy.
+bio: I work on design automation and AI for design engineering.
 social:
   - display:
       header: false
@@ -35,4 +34,4 @@ organizations:
     url: https://p-1.ai/
 superuser: true
 ---
-I am Ethan Lew, a Cyber-physical Systems Research Engineer. 
+I lead customer engineering at [P-1 AI](https://p-1.ai/). Before that, I was a research engineer at Galois, working on formal methods and autonomy. 

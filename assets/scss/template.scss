@@ -2,25 +2,25 @@
 // https://wowchemy.com/hugo-themes/
 
 body {
-  background-color: rgb(247, 250, 252);
+  background-color: #ecebe3;
 }
 
 .article-container {
-  background-color: #fff;
+  background-color: #f6f5ef;
   border-radius: 15px;
 }
 
 .dark .article-container {
-  background-color: rgb(31, 39, 51);
+  background-color: #161712;
 }
 
 // custom footer color
 .page-footer {
-  background-color: rgb(247, 250, 252);
+  background-color: #ecebe3;
 }
 
 .dark .page-footer {
-  background-color: rgb(26, 32, 44);
+  background-color: #0b0c0a;
 }
 
 // more rounded cards and larger gap between cards
@@ -30,7 +30,7 @@ body {
 }
 
 .dark .card-simple {
-  background: rgb(31, 39, 51);
+  background: #161712;
 }
 
 // no navbar shadow
