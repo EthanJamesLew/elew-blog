@@ -30,21 +30,22 @@
 <main>
   <header>
     <button class="packbtn" type="button" aria-label="17 squares packed in a square. Remove one.">{{ (resources.Get "home/packing-17.svg").Content | safeHTML }}</button>
-    <h1>Ethan Lew</h1>
+    <div class="id">
+      <h1>Ethan Lew</h1>
+      <nav aria-label="Elsewhere">
+        <a href="https://www.linkedin.com/in/ethan-lew" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://x.com/eth0lew" aria-label="X" title="X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+        <a href="https://github.com/EthanJamesLew" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://stackoverflow.com/users/13176319/dbat" aria-label="Stack Overflow" title="Stack Overflow"><i class="fab fa-stack-overflow" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=p8ZtL_0AAAAJ" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+        <a href="https://ethanjameslew.github.io/elew-cv/elew-cv.pdf" aria-label="CV" title="CV"><i class="ai ai-cv" aria-hidden="true"></i></a>
+      </nav>
+    </div>
   </header>
 
   <p>I build AI and design optimization methods that speed up real engineering work. Lately that means design automation and AI for design engineering, so teams can take on more complex designs and finish them faster.</p>
   <p>I lead customer engineering at <a href="https://p-1.ai/">P-1 AI</a>, where we're building an AI engineer for the physical world. Before that, I spent five years at <a href="https://galois.com/">Galois</a> working on formal methods and autonomy.</p>
   <p>I'm most interested in AI research and formal methods as they apply to design, especially getting AI to produce designs that engineers can check and trust.</p>
-
-  <nav aria-label="Elsewhere">
-    <a href="https://www.linkedin.com/in/ethan-lew" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-    <a href="https://x.com/eth0lew" aria-label="X" title="X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
-    <a href="https://github.com/EthanJamesLew" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-    <a href="https://stackoverflow.com/users/13176319/dbat" aria-label="Stack Overflow" title="Stack Overflow"><i class="fab fa-stack-overflow" aria-hidden="true"></i></a>
-    <a href="https://scholar.google.com/citations?user=p8ZtL_0AAAAJ" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
-    <a href="https://ethanjameslew.github.io/elew-cv/elew-cv.pdf" aria-label="CV" title="CV"><i class="ai ai-cv" aria-hidden="true"></i></a>
-  </nav>
 
   <div class="sec"><button class="optbtn sofabtn" type="button" aria-label="Move the sofa around the corner">{{ (resources.Get "home/sofa.svg").Content | safeHTML }}</button><h2>Papers</h2></div>
   <ul>

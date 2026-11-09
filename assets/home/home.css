@@ -62,7 +62,8 @@ a {
 
 a:hover { text-decoration-color: currentColor; }
 
-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 32px; font-size: 22px; line-height: 1; }
+.id { min-width: 0; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 16px; line-height: 1; }
 nav a { text-decoration: none; color: var(--dim); }
 nav a:hover { color: var(--fg); }
 
