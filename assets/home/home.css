@@ -71,3 +71,13 @@ li { margin-bottom: 12px; font-size: 16px; line-height: 1.4; }
 li span { color: var(--dim); font-size: 14px; white-space: nowrap; margin-left: 4px; }
 .packing .smoke { fill: var(--fg); }
 .packing .smoke.faint { fill: var(--rule); }
+
+.sec { display: flex; align-items: center; gap: 12px; margin: 64px 0 12px; }
+.sec h2 { margin: 0; }
+.optbtn { appearance: none; background: none; border: 0; padding: 0; cursor: pointer; flex: none; color: inherit; }
+.optbtn:focus-visible { outline: 1px solid var(--dim); outline-offset: 4px; }
+.glyph { width: 44px; height: 44px; display: block; pointer-events: none; }
+.glyph .hall { fill: none; stroke: var(--dim); stroke-width: 8; }
+.glyph .sofa { fill: var(--fg); }
+.glyph .tour { fill: none; stroke: var(--fg); stroke-width: 2.6; stroke-linejoin: round; }
+.glyph .city { fill: var(--fg); }
