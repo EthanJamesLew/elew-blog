@@ -1,0 +1,21 @@
+<svg class="packing" viewBox="-4 -4 475.553 475.553" role="img" aria-label="Best known packing of 17 unit squares in a square, side 4.6755">
+<title>17 unit squares in a square of side 4.6755, the best known packing (John Bidwell, 1998)</title>
+<polygon class="flat" points="0.000,467.553 100.000,467.553 100.000,367.553 0.000,367.553"/>
+<polygon class="flat" points="367.553,467.553 467.553,467.553 467.553,367.553 367.553,367.553"/>
+<polygon class="flat" points="100.000,467.553 200.000,467.553 200.000,367.553 100.000,367.553"/>
+<polygon class="flat" points="267.553,467.553 367.553,467.553 367.553,367.553 267.553,367.553"/>
+<polygon class="flat" points="0.000,367.553 100.000,367.553 100.000,267.553 0.000,267.553"/>
+<polygon class="flat" points="367.553,367.553 467.553,367.553 467.553,267.553 367.553,267.553"/>
+<polygon class="flat" points="0.000,100.000 100.000,100.000 100.000,0.000 0.000,0.000"/>
+<polygon class="flat" points="367.553,100.000 467.553,100.000 467.553,0.000 367.553,0.000"/>
+<polygon class="flat" points="184.732,100.000 284.732,100.000 284.732,0.000 184.732,0.000"/>
+<polygon class="flat" points="367.553,256.207 467.553,256.207 467.553,156.207 367.553,156.207"/>
+<polygon class="tilt" points="64.018,267.553 140.840,203.535 76.823,126.713 -0.000,190.730"/>
+<polygon class="tilt" points="137.202,199.169 214.025,135.151 150.007,58.328 73.184,122.346"/>
+<polygon class="tilt" points="149.271,326.680 226.094,262.662 162.076,185.839 85.254,249.857"/>
+<polygon class="tilt" points="222.455,258.296 299.278,194.278 235.260,117.455 158.438,181.473"/>
+<polygon class="tilt" points="223.126,395.305 299.949,331.287 235.931,254.464 159.108,318.482"/>
+<polygon class="tilt" points="296.310,326.921 373.133,262.903 309.115,186.080 232.293,250.098"/>
+<polygon class="tilt" points="254.551,140.604 334.808,200.260 394.464,120.003 314.207,60.347"/>
+<rect class="wall" width="467.553" height="467.553"/>
+</svg>

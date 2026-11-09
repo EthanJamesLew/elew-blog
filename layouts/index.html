@@ -1,5 +1,6 @@
 {{- /* Standalone homepage. Inner pages (posts, publications) still render through Wowchemy. */ -}}
 {{- $css := resources.Get "home/home.css" | minify | fingerprint -}}
+{{- $js := resources.Get "home/packing.js" | minify | fingerprint -}}
 {{- $pubs := (where site.RegularPages "Section" "publication").ByDate.Reverse -}}
 {{- $writing := (where site.RegularPages "Section" "in" (slice "post" "external-post")).ByDate.Reverse -}}
 {{- $desc := "Ethan Lew works on design automation and AI for design engineering." -}}
@@ -13,6 +14,7 @@
   <meta property="og:title" content="Ethan Lew">
   <meta property="og:description" content="{{ $desc }}">
   <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | relURL }}" title="Ethan Lew">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +27,10 @@
 </head>
 <body>
 <main>
-  <h1>Ethan Lew</h1>
+  <header>
+    <button class="packbtn" type="button" aria-label="17 squares packed in a square. Remove one.">{{ (resources.Get "home/packing-17.svg").Content | safeHTML }}</button>
+    <h1>Ethan Lew</h1>
+  </header>
 
   <p>I build AI and design optimization methods that speed up real engineering work. Lately that means design automation and AI for design engineering, so teams can take on more complex designs and finish them faster.</p>
   <p>I lead customer engineering at <a href="https://p-1.ai/">P-1 AI</a>, where we're building an AI engineer for the physical world. Before that, I spent five years at <a href="https://galois.com/">Galois</a> working on formal methods and autonomy.</p>
@@ -55,5 +60,6 @@
     {{- end }}
   </ul>
 </main>
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 </body>
 </html>

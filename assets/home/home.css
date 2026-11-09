@@ -31,7 +31,24 @@ main {
 }
 
 h1, h2 { font-weight: 500; margin: 0; }
-h1 { font-size: 18px; margin-bottom: 32px; }
+h1 { font-size: 18px; }
+header { display: flex; align-items: center; min-height: 64px; margin-bottom: 32px; }
+
+.packbtn {
+  appearance: none; background: none; border: 0; padding: 0; cursor: pointer;
+  width: 64px; margin-right: 16px; flex: none; color: inherit;
+  transition: width .5s ease, margin-right .5s ease;
+}
+.packbtn:focus-visible { outline: 1px solid var(--dim); outline-offset: 4px; }
+.packbtn.gone { width: 0; margin-right: 0; }
+.packbtn[hidden] { display: none; }
+
+.packing { width: 64px; height: 64px; display: block; overflow: visible; pointer-events: none; }
+.packing .wall { fill: none; stroke: var(--fg); stroke-width: 7; }
+.packing .flat, .packing .tilt { stroke: var(--bg); stroke-width: 7; }
+.packing .flat, .packing .tilt { transition: fill .3s; }
+.packing .flat { fill: var(--rule); }
+.packing .tilt { fill: var(--fg); }
 h2 { font-size: 15px; color: var(--dim); margin: 64px 0 12px; }
 
 p { margin: 0 0 1em; }
@@ -52,3 +69,5 @@ nav a:hover { color: var(--fg); }
 ul { list-style: none; margin: 0; padding: 0; }
 li { margin-bottom: 12px; font-size: 16px; line-height: 1.4; }
 li span { color: var(--dim); font-size: 14px; white-space: nowrap; margin-left: 4px; }
+.packing .smoke { fill: var(--fg); }
+.packing .smoke.faint { fill: var(--rule); }
